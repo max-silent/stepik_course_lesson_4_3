@@ -8,6 +8,7 @@ product_link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_2
 main_page_link = "http://selenium1py.pythonanywhere.com/"
 
 
+@pytest.mark.need_review
 @pytest.mark.basket_success_message
 class TestSuccessMessage:
     @pytest.mark.xfail
@@ -30,6 +31,7 @@ class TestSuccessMessage:
         page.should_disappear_success_message()
 
 
+@pytest.mark.need_review
 @pytest.mark.login_guest
 class TestLoginFromMainPage:
     def test_guest_can_go_to_login_page(self, browser):
@@ -45,6 +47,7 @@ class TestLoginFromMainPage:
         page.should_be_login_link()
 
 
+@pytest.mark.need_review
 @pytest.mark.login_guest_from_product
 class TestLoginFromProductPage:
     def test_guest_should_see_login_link_on_product_page(self, browser):
@@ -53,6 +56,7 @@ class TestLoginFromProductPage:
         page.should_be_login_link()
 
 
+@pytest.mark.need_review
 @pytest.mark.basket_guest
 class TestBasketFromMainPage:
     def test_guest_cant_see_product_in_basket_opened_from_main_page(self, browser):

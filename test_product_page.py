@@ -7,6 +7,7 @@ from .pages.basket_page import BasketPage
 product_link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/"
 
 
+@pytest.mark.need_review
 @pytest.mark.basket_user
 class TestBasketByUser:
     """ Tests from lesson 4.3 step 13
@@ -33,6 +34,7 @@ class TestBasketByUser:
         page.should_not_be_success_message()
 
 
+@pytest.mark.need_review
 @pytest.mark.basket_guest
 class TestBasketByGuest:
     def test_guest_can_go_to_login_page_from_product_page(self, browser):
