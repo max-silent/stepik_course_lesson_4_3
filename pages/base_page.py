@@ -89,4 +89,4 @@ class BasePage:
                 print("No second alert presented")
         except (NoAlertPresentException, TimeoutException):
             print("There is no any alert")
-        time.sleep(3)
+        time.sleep(1)
